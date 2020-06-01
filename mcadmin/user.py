@@ -46,7 +46,7 @@ def user_add(target, username, password, flags='--json', **kwargs):
 
 
 def user_remove(target, username, flags='--json', **kwargs):
-    '''Remove user 'hellokitten' on MinIO.
+    '''Remove user on MinIO.
 
     Usage::
 
@@ -61,7 +61,7 @@ def user_remove(target, username, flags='--json', **kwargs):
 
 
 def user_enable(target, username, flags='--json', **kwargs):
-    '''Enable a user 'rockstar' on MinIO.
+    '''Enable a user on MinIO.
 
     Usage::
 
@@ -73,7 +73,7 @@ def user_enable(target, username, flags='--json', **kwargs):
 
 
 def user_disable(target, username, flags='--json', **kwargs):
-    '''Disable a user 'rockstar' on MinIO.
+    '''Disable a user on MinIO.
 
     Usage::
 

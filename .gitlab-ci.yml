@@ -1,0 +1,10 @@
+image: python:3.7-buster
+
+
+before_script:
+  - pip install -r requirements.txt
+
+test:
+  script:
+    - coverage run --source=mcadmin -m unittest discover && coverage report
+  coverage: '/TOTAL.+ ([0-9]{1,3}%)/'

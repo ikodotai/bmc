@@ -31,7 +31,7 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = ['sphinx.ext.autodoc']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -46,9 +46,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'BIGmama Client'
+project = 'mcadmin'
 copyright = '2020, BIGmama Technology'
-
+author = 'BIGmama Technology'
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.

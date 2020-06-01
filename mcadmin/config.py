@@ -5,9 +5,10 @@ from ._utils import make_json
 def host_add(alias, url, username, password, flags='--json', **kwargs):
     '''Add an alias for the host storage.
 
-    Example ::
-    >>> host_add('coolname', 'http://localhost:9000', 'minio_access_key', 'minio_secret_key')
-    [{'status': 'success',
+    Usage ::
+
+      >>> host_add('coolname', 'http://localhost:9000', 'minio_access_key', 'minio_secret_key')
+      [{'status': 'success',
       'alias': 'aliasforhost',
       'URL': 'http://localhost:9000',
       'accessKey': 'minio_access_key',

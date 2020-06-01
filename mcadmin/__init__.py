@@ -12,4 +12,12 @@ from .user import (
     user_info,
 )
 
-del user
+from .config import (
+    host_add,
+)
+
+try:
+    del user
+    del config
+except NameError:
+    pass

@@ -14,6 +14,7 @@ from .user import (
 
 from .config import (
     host_add,
+    host_list,
 )
 
 try:

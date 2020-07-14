@@ -34,4 +34,4 @@ API
 .. autofunction:: host_add
 .. autofunction:: host_list
 
-.. autofunction:: ls_buckets_objects
+.. autofunction:: ls

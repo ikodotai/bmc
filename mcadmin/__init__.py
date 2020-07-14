@@ -18,5 +18,5 @@ from ._config import (
 )
 
 from ._ls import (
-    ls_buckets_objects,
+    ls,
 )

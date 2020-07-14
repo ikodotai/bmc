@@ -2,7 +2,7 @@ import subprocess
 from ._utils import make_json
 
 
-def ls_buckets_objects(target='', flags='--json', recursive=False, **kwargs):
+def ls(target='', flags='--json', recursive=False, **kwargs):
     '''List buckets and objects.
 
     Usage::

@@ -8,3 +8,13 @@ test:
   script:
     - coverage run --source=mcadmin -m unittest discover && coverage report
   coverage: '/TOTAL.+ ([0-9]{1,3}%)/'
+
+
+pages:
+  script:
+  - sphinx-build -b html docs public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master

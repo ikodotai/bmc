@@ -32,3 +32,6 @@ API
 .. autofunction:: user_info
 
 .. autofunction:: host_add
+.. autofunction:: host_list
+
+.. autofunction:: ls_buckets_objects

@@ -1,5 +1,5 @@
 ###################
-mcadmin Documentation
+bmmc Documentation
 ###################
 
 .. toctree::
@@ -14,7 +14,7 @@ Getting Started
 
 ::
 
-  import mcadmin
+  import bmmc
 
 
 
@@ -22,14 +22,14 @@ Getting Started
 API
 ***
 
-.. module:: mcadmin
+.. module:: bmmc
 
-.. autofunction:: user_list
-.. autofunction:: user_add
-.. autofunction:: user_remove
-.. autofunction:: user_enable
-.. autofunction:: user_disable
-.. autofunction:: user_info
+.. autofunction:: admin_user_list
+.. autofunction:: admin_user_add
+.. autofunction:: admin_user_remove
+.. autofunction:: admin_user_enable
+.. autofunction:: admin_user_disable
+.. autofunction:: admin_user_info
 
 .. autofunction:: host_add
 .. autofunction:: host_list

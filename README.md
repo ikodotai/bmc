@@ -1,21 +1,21 @@
-![coverage](https://gitlab.com/big-mama-tech/mcadmin/badges/master/coverage.svg?job=test)
+![coverage](https://gitlab.com/big-mama-tech/bmmc/badges/master/coverage.svg?job=test)
 
-# mcadmin
+# bmmc
 
 
-mcadmin is a Python wrapper for the Minio _mc_ command line interface.
+bmmc is a Python wrapper for the Minio _mc_ command line interface.
 
 ## Installation
 
 ```bash
-pip install mcadmin
+pip install bmmc
 ```
 
 ## Development
 
 ```bash
-git clone https://gitlab.com/big-mama-tech/mcadmin
-cd mcadmin
+git clone https://gitlab.com/big-mama-tech/bmmc
+cd bmmc
 pip install -e .
 
 # Generate documentation

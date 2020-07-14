@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'mcadmin'
+project = 'bmmc'
 copyright = '2020, BIGmama Technology'
 author = 'BIGmama Technology'
 # The version info for the project you're documenting, acts as replacement for

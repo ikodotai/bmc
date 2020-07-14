@@ -3,7 +3,7 @@
 __version__ = '0.0.1'
 __title__ = 'mcadmin'
 
-from .user import (
+from ._user import (
     user_list,
     user_add,
     user_remove,
@@ -12,13 +12,11 @@ from .user import (
     user_info,
 )
 
-from .config import (
+from ._config import (
     host_add,
     host_list,
 )
 
-try:
-    del user
-    del config
-except NameError:
-    pass
+from ._ls import (
+    ls_buckets_objects,
+)

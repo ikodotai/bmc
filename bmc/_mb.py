@@ -6,14 +6,14 @@ def mb(**kwargs):
 
     Usage::
 
-      >>> r = mb(target='s3/newbucket')
+      >>> r = mb(target='s3/vacation-pictures')
       >>> r.content
       [{'status': 'success',
         'bucket': 's3/vacation-pictures',
         'region': ''}]
+      >>> r = mb(target='s3/vacation-pictures-bis', region='us-east-1')
       >>> r.json
-      >>> r = mb(target='s3/vacation-pictures', region='us-east-1')
-      '[{"status":"success","bucket":"s3/vacation-pictures","region":""}]'
+      '[{"status":"success","bucket":"s3/vacation-pictures-bis","region":""}]'
 
     :param target: where to create the bucket, example: 's3/awesome-bucket'
     :param region: bucket region. Defaults to 'us-east-1'

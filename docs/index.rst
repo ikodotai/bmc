@@ -1,11 +1,11 @@
 .. rst-class:: hide-header
 
 
-bmmc
-####
+bmc
+###
 
 
-bmmc is a Python wrapper for MinIO's command line interface `mc` and `minio`. 
+bmc is a Python wrapper for MinIO's command line interface `mc` and `minio`. 
 MinIO has a useful client library which unfortunately lacks administrative capabilities, such as adding users and hosts, which we need to do for the `iko <https://iko.ai>`_ machine learning platform.
 
 .. toctree::
@@ -21,9 +21,9 @@ Getting Started
 
 ::
 
-  >>> import bmmc
+  >>> import bmc
 
-  >>> r = bmmc.config_host_add(
+  >>> r = bmc.config_host_add(
   ...     alias='aliasforhost',
   ...     url='http://localhost:9000',
   ...     username='jhadjar',

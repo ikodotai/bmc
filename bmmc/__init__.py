@@ -1,7 +1,7 @@
 '''BIGmama Python wrapper for the MinIO command line interface.'''
 
 __version__ = '0.0.1'
-__title__ = 'bmmc'
+__title__ = 'bmc'
 
 from ._user import (
     admin_user_list,

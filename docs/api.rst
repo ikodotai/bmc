@@ -3,9 +3,9 @@
 API
 ===
 
-.. module:: bmmc
+.. module:: bmc
 
-This documents the different functions and main objects for bmmc.
+This documents the different functions and main objects for bmc.
 
 
 
@@ -39,7 +39,7 @@ minio server
 Command Object
 --------------
 
-.. autoclass:: bmmc._utils.Command
+.. autoclass:: bmc._utils.Command
    :members:
    :inherited-members:
 
@@ -47,7 +47,7 @@ Command Object
 Response Object
 ---------------
 
-.. autoclass:: bmmc._utils.Response
+.. autoclass:: bmc._utils.Response
    :members:
    :inherited-members:
 

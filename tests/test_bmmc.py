@@ -1,6 +1,6 @@
 import unittest
 
-import bmmc
+import bmc
 
 
 class InitialTest(unittest.TestCase):

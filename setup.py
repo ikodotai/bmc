@@ -7,7 +7,7 @@ from setuptools import find_packages, setup
 def get_version(filename='__init__.py'):
     here = os.path.abspath(os.path.dirname(__file__))
     version_re = re.compile(r'''__version__ = ['"]([0-9.]+)['"]''')
-    with open(os.path.join(here, 'bmmc', filename)) as f:
+    with open(os.path.join(here, 'bmc', filename)) as f:
         content = f.read()
     return version_re.search(content).group(1)
 
@@ -24,7 +24,7 @@ def get_long_description(filename='README.md'):
     return long_description
 
 setup(
-    name='bmmc',
+    name='bmc',
     version=get_version(),
     packages=find_packages(),
     author="BIGmama Technology",
@@ -33,7 +33,7 @@ setup(
     long_description=get_long_description(),
     install_requires=get_requirements(),
     include_package_data=True,
-    url='http://gitlab.com/big-mama-tech/bmmc',
+    url='http://gitlab.com/big-mama-tech/bmc',
     classifiers=[
         "Programming Language :: Python",
         "Development Status :: 1 - Alpha",

@@ -42,7 +42,7 @@ Getting Started
 
 .. raw:: html
 
-    <script id="asciicast-umJbbEZO0zb5SZliX1T2LMlxV" src="https://asciinema.org/a/umJbbEZO0zb5SZliX1T2LMlxV.js" async></script>
+    <script id="asciicast-8CTCfGKzCHHt7IaL7wNCvoyJe" src="https://asciinema.org/a/8CTCfGKzCHHt7IaL7wNCvoyJe.js" async></script>
 
 
 

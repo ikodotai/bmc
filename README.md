@@ -11,7 +11,7 @@ bmc is a Python wrapper for the Minio _mc_ command line interface.
 pip install bmc
 ```
 
-[![asciicast](https://asciinema.org/a/umJbbEZO0zb5SZliX1T2LMlxV.svg)](https://asciinema.org/a/umJbbEZO0zb5SZliX1T2LMlxV)
+[![asciicast](https://asciinema.org/a/8CTCfGKzCHHt7IaL7wNCvoyJe.svg)](https://asciinema.org/a/8CTCfGKzCHHt7IaL7wNCvoyJe)
 
 ## Development
 

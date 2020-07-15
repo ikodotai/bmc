@@ -28,6 +28,12 @@ def ls(**kwargs):
       >>> r = ls(target='coolname', recursive=True)
       >>> r.content
 
+    :param target: target to list objects for. example: 's3/awesome-bucket'.
+                   Defaults to an empty string '' to list the current working
+                   directory.
+    :param recursive: if set to ``True``, will recursively list objects.
+                      Defaults to ``False``
+
     '''
     kwargs.setdefault('target', '')
     cmd = Command('mc ls {flags} {target}')

@@ -5,9 +5,17 @@ bmmc
 ####
 
 
-bmmc is a Python wrapper for MinIO's command line interface. MinIO has a 
-useful client library, but it lacks the capability to do some operations, such 
-as configure hosts, or list users.
+bmmc is a Python wrapper for MinIO's command line interface `mc` and `minio`. 
+MinIO has a useful client library, but it lacks the capability to do some 
+operations, such as configure hosts, or list users which we need to do for `iko <https://iko.ai>`_
+
+.. toctree::
+   :maxdepth: -1
+
+   introduction
+   api
+
+
 
 Getting Started
 ---------------
@@ -39,11 +47,6 @@ Getting Started
 
 
 
-.. toctree::
-   :maxdepth: 2
-
-   introduction
-   api
 
 
 

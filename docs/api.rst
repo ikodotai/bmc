@@ -8,6 +8,18 @@ API
 This documents the different functions and main objects for bmc.
 
 
+mc ls
+-----
+
+.. autofunction:: ls
+
+
+mc mb
+-----
+
+.. autofunction:: mb
+
+
 
 mc admin
 --------
@@ -25,10 +37,6 @@ mc config
 .. autofunction:: config_host_add
 .. autofunction:: config_host_list
 
-mc ls
------
-
-.. autofunction:: ls
 
 minio server
 ------------

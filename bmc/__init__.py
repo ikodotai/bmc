@@ -3,6 +3,15 @@
 __version__ = '0.0.1'
 __title__ = 'bmc'
 
+
+from ._ls import (
+    ls,
+)
+
+from ._mb import (
+    mb,
+)
+
 from ._user import (
     admin_user_list,
     admin_user_add,
@@ -17,9 +26,6 @@ from ._config import (
     config_host_list,
 )
 
-from ._ls import (
-    ls,
-)
 
 from ._server import (
     server,

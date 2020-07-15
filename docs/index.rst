@@ -16,8 +16,8 @@ Getting Started
 
   >>> import bmmc
 
-  >>> r = config_host_add(
-  ...     alias='coolname',
+  >>> r = bmmc.config_host_add(
+  ...     alias='aliasforhost',
   ...     url='http://localhost:9000',
   ...     username='jhadjar',
   ...     password='soverysecret',

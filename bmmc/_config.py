@@ -7,7 +7,7 @@ def config_host_add(**kwargs):
     Usage ::
 
       >>> r = config_host_add(
-          alias='coolname',
+          alias='aliasforost',
           url='http://localhost:9000',
           username='coolusername',
           password='soverysecret',
@@ -32,7 +32,7 @@ def config_host_list(**kwargs):
 
     Usage ::
 
-      >>> r= config_host_list()
+      >>> r = config_host_list()
       >>> r.content
       [{'status': 'success',
         'alias': 'aliasforhost',

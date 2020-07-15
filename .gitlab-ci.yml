@@ -6,7 +6,7 @@ before_script:
 
 test:
   script:
-    - coverage run --source=bmmc -m unittest discover && coverage report
+    - coverage run --source=bmc -m unittest discover && coverage report
   coverage: '/TOTAL.+ ([0-9]{1,3}%)/'
 
 

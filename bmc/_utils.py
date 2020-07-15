@@ -4,6 +4,36 @@ import re
 
 PATTERN = re.compile('{(.+?)}')
 
+
+
+def decoder(s):
+    return s.decode('utf-8')
+
+def stripnl(s, source='\n'):
+    return s.strip(source)
+
+def replacenl(s, source='\n', target=','):
+    return s.replace(source, target)
+
+def closing_curls(s):
+    return s.replace(',}', '}')
+
+def opening_curls(s):
+    return s.replace('{,', '{')
+
+def dedup_commas(s):
+    return s.replace(',,', ',')
+
+
+processors = [decoder, stripnl, replacenl, opening_curls, closing_curls, dedup_commas]
+
+
+def process_string(s, processors=processors):
+    for processor in processors:
+        s = processor(s)
+    return s
+
+
 def kwarg_to_flag(**kwargs):
     _flags = []
     for _key, _value in kwargs.items():
@@ -25,8 +55,8 @@ def flag_to_kwarg(flag):
     return {flag_name: value}
 
 
-def make_json(subprocess_output, wrap=True, pair=('[', ']')):
-    preprocessed = subprocess_output.decode('utf-8').strip('\n').replace('\n', ',')
+def make_json(subprocess_output, wrap=True, pair=('[', ']'), processors=processors):
+    preprocessed = process_string(subprocess_output, processors=processors)
     if wrap:
         opening, closing = pair
         sequence_to_load = f'{opening}{preprocessed}{closing}'

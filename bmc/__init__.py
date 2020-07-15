@@ -16,6 +16,9 @@ from ._rb import (
     rb,
 )
 
+from ._cp import (
+    cp,
+)
 
 
 from ._user import (

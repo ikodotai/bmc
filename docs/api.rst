@@ -27,6 +27,11 @@ mc rb
 .. autofunction:: rb
 
 
+mc cp
+-----
+
+.. autofunction:: cp
+
 
 
 mc admin

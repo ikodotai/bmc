@@ -1,13 +1,13 @@
-import subprocess
-from ._utils import make_json
+from ._utils import Command
 
 
-def ls(target='', flags='--json', recursive=False, **kwargs):
+def ls(**kwargs):
     '''List buckets and objects.
 
     Usage::
 
-      >>> ls()
+      >>> r = ls()
+      >>> r.content
       [{
        "status": "success",
        "type": "folder",
@@ -25,8 +25,10 @@ def ls(target='', flags='--json', recursive=False, **kwargs):
        "etag": ""
       }]
 
-      >>> ls('coolname', recursive=True)
+      >>> r = ls(target='coolname', recursive=True)
+      >>> r.content
+
     '''
-    recursive = '--recursive' if recursive else ''
-    cmd = f'mc {flags} ls {recursive} {target}'.split()
-    return make_json(subprocess.check_output(cmd))
+    kwargs.setdefault('target', '')
+    cmd = Command('mc ls {flags} {target}')
+    return cmd(**kwargs)

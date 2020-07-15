@@ -21,5 +21,8 @@ from ._ls import (
     ls,
 )
 
+from ._server import (
+    server,
+)
 
 from ._utils import Command, Response

@@ -24,6 +24,7 @@ Functions
 
 .. autofunction:: ls
 
+.. autofunction:: server
 
 
 Main objects

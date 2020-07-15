@@ -12,6 +12,12 @@ from ._mb import (
     mb,
 )
 
+from ._rb import (
+    rb,
+)
+
+
+
 from ._user import (
     admin_user_list,
     admin_user_add,

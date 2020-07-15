@@ -21,6 +21,14 @@ mc mb
 
 
 
+mc rb
+-----
+
+.. autofunction:: rb
+
+
+
+
 mc admin
 --------
 

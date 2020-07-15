@@ -14,28 +14,13 @@ __all__ = [
 ]
 
 
-
-def admin_user_list(**kwargs):
-    '''List all users on MinIO.
-
-    Usage::
-
-      >>> admin_admin_user_list(target='aliasforhost')
-      [{'status': 'success', 'accessKey': 'hellokitten', 'userStatus': 'enabled'},
-       {'status': 'success', 'accessKey': 'jumanji', 'userStatus': 'enabled'},
-       {'status': 'success', 'accessKey': 'rockstar', 'userStatus': 'enabled'},
-       {'status': 'success', 'accessKey': 'test_access_key', 'policyName': 'readwrite', 'userStatus': 'enabled'}]
-    '''
-    cmd = Command(cmd_template='mc {flags} admin user list {target}')
-    return cmd(**kwargs)
-
-
-def admin_user_add(target, username, password, **kwargs):
+def admin_user_add(**kwargs):
     '''Add a new user on MinIO.
 
     Usage::
 
-      >>> admin_user_add(target='aliasforhost', username='rockstar', password='verysecretpassword')
+      >>> r = admin_user_add(target='aliasforhost', username='rockstar', password='verysecretpassword')
+      >>> r.content
       [{'status': 'success',
         'accessKey': 'rockstar',
         'secretKey': 'verysecretpassword',
@@ -45,12 +30,13 @@ def admin_user_add(target, username, password, **kwargs):
     return cmd(**kwargs)
 
 
-def admin_user_remove(target, username, **kwargs):
+def admin_user_remove(**kwargs):
     '''Remove user on MinIO.
 
     Usage::
 
-      >>> admin_user_remove('aliasforhost', 'hellokitten')
+      >>> r = admin_user_remove(target='aliasforhost', username='hellokitten')
+      >>> r.content
       [{
        'status': 'success',
        'accessKey': 'hellokitten'
@@ -60,36 +46,55 @@ def admin_user_remove(target, username, **kwargs):
     return cmd(**kwargs)
 
 
-def admin_user_enable(target, username, **kwargs):
+def admin_user_enable(**kwargs):
     '''Enable a user on MinIO.
 
     Usage::
 
-      >>> admin_user_enable('aliasforhost', 'rockstar')
+      >>> r = admin_user_enable(target='aliasforhost', username='rockstar')
+      >>> r.content
       [{'status': 'success', 'accessKey': 'rockstar'}]
     '''
     cmd = Command('mc {flags} admin user enable {target} {username}')
     return cmd(**kwargs)
 
 
-def admin_user_disable(target, username, **kwargs):
+def admin_user_disable(**kwargs):
     '''Disable a user on MinIO.
 
     Usage::
 
-      >>> admin_user_disable('aliasforhost', 'rockstar')
+      >>> r = admin_user_disable(target='aliasforhost', username='rockstar')
+      >>> r.content
       [{'status': 'success', 'accessKey': 'rockstar'}]
     '''
     cmd = Command('mc {flags} admin user disable {target} {username}')
     return cmd(**kwargs)
 
 
-def admin_user_info(target, username, **kwargs):
+def admin_user_list(**kwargs):
+    '''List all users on MinIO.
+
+    Usage::
+
+      >>> admin_admin_user_list(target='aliasforhost')
+      >>> r.content
+      [{'status': 'success', 'accessKey': 'hellokitten', 'userStatus': 'enabled'},
+       {'status': 'success', 'accessKey': 'jumanji', 'userStatus': 'enabled'},
+       {'status': 'success', 'accessKey': 'rockstar', 'userStatus': 'enabled'},
+       {'status': 'success', 'accessKey': 'test_access_key', 'policyName': 'readwrite', 'userStatus': 'enabled'}]
+    '''
+    cmd = Command('mc {flags} admin user list {target}')
+    return cmd(**kwargs)
+
+
+def admin_user_info(**kwargs):
     '''Display info of a user.
 
     Usage::
 
-      >>> admin_user_info('aliasforhost', 'rockstar')
+      >>> r = admin_user_info(target='aliasforhost', username='rockstar')
+      >>> r.content
       [{'status': 'success', 'accessKey': 'rockstar', 'userStatus': 'disabled'}]
     '''
     cmd = Command('mc {flags} admin user info {target} {username}')

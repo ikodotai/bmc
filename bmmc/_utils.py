@@ -76,9 +76,9 @@ class Response(object):
         self.output = output
         self._wrap = wrap
         self.json = make_json(self.output, wrap=self._wrap)
-        self.dict = json.loads(self.json)
+        self.content = json.loads(self.json)
         try:
-            self.status = self.json.get('status', 'success')
+            self.status = self.content.get('status', 'success')
         except AttributeError:
             self.status = 'success'
 
@@ -90,8 +90,8 @@ class Response(object):
 class Command(object):
     def __init__(
         self,
-        name=None,
         cmd_template=None,
+        name=None,
         action=None,
         flags={'json': True},
         docstrings=None,

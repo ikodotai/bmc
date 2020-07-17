@@ -57,7 +57,9 @@ def flag_to_kwarg(flag):
 
 def make_json(subprocess_output, wrap=True, pair=('[', ']'), processors=processors):
     preprocessed = process_string(subprocess_output, processors=processors)
-    if wrap:
+    try:
+        content = json.loads(preprocessed)
+    except json.JSONDecodeError as e:
         opening, closing = pair
         sequence_to_load = f'{opening}{preprocessed}{closing}'
     else:
@@ -85,27 +87,23 @@ def execute_command(command, wrapper_cls=None):
         _output = subprocess.check_output(arguments_list)
     except subprocess.CalledProcessError as e:
         output = e.output
-        wrap = False
     else:
         output = _output
-        wrap = True
     return wrapper_cls(
         command=command.command_string,
         name=command.name,
         output=output,
-        wrap=wrap,
     )
 
 
 class Response(object):
     '''Response object for mc command line interface output.'''
 
-    def __init__(self, command=None, name=None, output=None, wrap=True):
+    def __init__(self, command=None, name=None, output=None):
         self.command = command
         self.name = name
         self.output = output
-        self._wrap = wrap
-        self.json = make_json(self.output, wrap=self._wrap)
+        self.json = make_json(self.output)
         self.content = json.loads(self.json)
         try:
             self.status = self.content.get('status', 'success')

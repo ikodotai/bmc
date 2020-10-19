@@ -15,5 +15,5 @@ def server(**kwargs):
 
       >>> server(address=':9008', dir='/home/jugurtha/data')
     '''
-    cmd = Command('minio server {flags} {dir}')
+    cmd = Command('minio {flags} server {dir}')
     return cmd(**kwargs)

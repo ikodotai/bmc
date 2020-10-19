@@ -57,5 +57,5 @@ def cp(**kwargs):
 
 
     '''
-    cmd = Command('mc cp {flags} {source} {target}')
+    cmd = Command('mc {flags} cp {source} {target}')
     return cmd(**kwargs)

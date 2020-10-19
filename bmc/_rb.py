@@ -20,5 +20,5 @@ def rb(**kwargs):
                   Defaults to ``False``.
 
     '''
-    cmd = Command('mc rb {flags} {target}')
+    cmd = Command('mc {flags} rb {target}')
     return cmd(**kwargs)

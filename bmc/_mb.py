@@ -19,5 +19,5 @@ def mb(**kwargs):
     :param region: bucket region. Defaults to 'us-east-1'
     :param with_lock: if set to ``True``, enable object lock
     '''
-    cmd = Command('mc mb {flags} {target}')
+    cmd = Command('mc {flags} mb {target}')
     return cmd(**kwargs)

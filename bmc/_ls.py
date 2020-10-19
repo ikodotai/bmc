@@ -36,5 +36,5 @@ def ls(**kwargs):
 
     '''
     kwargs.setdefault('target', '')
-    cmd = Command('mc ls {flags} {target}')
+    cmd = Command('mc {flags} ls {target}')
     return cmd(**kwargs)

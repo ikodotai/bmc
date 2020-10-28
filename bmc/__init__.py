@@ -48,6 +48,15 @@ from ._policy import (
     admin_policy_set,
 )
 
+from ._group import (
+    admin_group_add,
+    admin_group_remove,
+    admin_group_info,
+    admin_group_list,
+    admin_group_enable,
+    admin_group_disable,
+)
+
 from ._utils import (
     BMCError,
     check_error,

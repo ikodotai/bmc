@@ -39,3 +39,11 @@ from ._config import (
 from ._server import (
     server,
 )
+
+from ._policy import (
+    admin_policy_add,
+    admin_policy_remove,
+    admin_policy_list,
+    admin_policy_info,
+    admin_policy_set,
+)

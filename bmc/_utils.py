@@ -5,6 +5,9 @@ import re
 PATTERN = re.compile('{(.+?)}')
 
 
+class BMCError(Exception):
+    pass
+
 
 def decoder(s):
     return s.decode('utf-8')
@@ -139,3 +142,11 @@ class Command(object):
         return self.result
 
 
+def check_error(response: Response):
+    """Checks response status and raises a 'BMCError' exception with the error message.
+    """
+    if response.status == 'error':
+        message = response.content.get('error', {}).get('message', '')
+        cause = response.content.get('error', {}).get(
+            'cause', {}).get('message', '')
+        raise BMCError(f'{message}:{cause}')

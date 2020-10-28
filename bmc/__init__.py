@@ -47,3 +47,8 @@ from ._policy import (
     admin_policy_info,
     admin_policy_set,
 )
+
+from ._utils import (
+    BMCError,
+    check_error,
+)

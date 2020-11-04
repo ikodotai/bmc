@@ -9,6 +9,8 @@ __all__ = [
     'admin_group_disable',
 ]
 
+GROUP_COMMAND = 'mc {flags} admin group '
+
 
 def admin_group_add(**kwargs):
     '''Add users to a new or existing group.
@@ -22,7 +24,7 @@ def admin_group_add(**kwargs):
     if not isinstance(kwargs['members'], str):
         kwargs['members'] = ' '.join(kwargs['members'])
 
-    cmd = Command('mc {flags} admin group add {target} {group} {members}')
+    cmd = Command(GROUP_COMMAND + 'add {target} {group} {members}')
 
     return cmd(**kwargs)
 
@@ -46,7 +48,7 @@ def admin_group_remove(**kwargs):
     elif not isinstance(kwargs['members'], str):
         kwargs['members'] = ' '.join(kwargs['members'])
 
-    cmd = Command('mc {flags} admin group remove {target} {group} {members}')
+    cmd = Command(GROUP_COMMAND + 'remove {target} {group} {members}')
 
     return cmd(**kwargs)
 
@@ -61,7 +63,7 @@ def admin_group_info(**kwargs):
       {'status': 'success', 'groupName': 'admins', 'members': ['rockstar', 'test'],
       'groupStatus': 'enabled', 'groupPolicy': 'somePolicy'}
     '''
-    cmd = Command('mc {flags} admin group info {target} {group}')
+    cmd = Command(GROUP_COMMAND + 'info {target} {group}')
     return cmd(**kwargs)
 
 
@@ -74,7 +76,7 @@ def admin_group_list(**kwargs):
       >>> r.content
       {'status': 'success', 'groups': ['foo', 'bar', 'admins']}
     '''
-    cmd = Command('mc {flags} admin group list {target}')
+    cmd = Command(GROUP_COMMAND + 'list {target}')
     return cmd(**kwargs)
 
 
@@ -87,7 +89,7 @@ def admin_group_enable(**kwargs):
       >>> r.content
       {'status': 'success', 'groupName': 'admins', 'groupStatus': 'enabled'}
     '''
-    cmd = Command('mc {flags} admin group enable {target} {group}')
+    cmd = Command(GROUP_COMMAND + 'enable {target} {group}')
     return cmd(**kwargs)
 
 
@@ -100,5 +102,5 @@ def admin_group_disable(**kwargs):
       >>> r.content
       {'status': 'success', 'groupName': 'admins', 'groupStatus': 'disabled'}
     '''
-    cmd = Command('mc {flags} admin group disable {target} {group}')
+    cmd = Command(GROUP_COMMAND + 'disable {target} {group}')
     return cmd(**kwargs)

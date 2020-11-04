@@ -8,6 +8,8 @@ __all__ = [
     'admin_policy_set',
 ]
 
+POLICY_COMMAND = 'mc {flags} admin policy '
+
 
 def admin_policy_add(**kwargs):
     '''Add new canned policy on MinIO.
@@ -18,7 +20,7 @@ def admin_policy_add(**kwargs):
       >>> r.content
       {'status': 'success', 'policy': 'admins', 'isGroup': False}
     '''
-    cmd = Command('mc {flags} admin policy add {target} {name} {file}')
+    cmd = Command(POLICY_COMMAND + 'add {target} {name} {file}')
 
     return cmd(**kwargs)
 
@@ -32,7 +34,7 @@ def admin_policy_remove(**kwargs):
       >>> r.content
       {'status': 'success', 'policy': 'admins', 'isGroup': False}
     '''
-    cmd = Command('mc {flags} admin policy remove {target} {name}')
+    cmd = Command(POLICY_COMMAND + 'remove {target} {name}')
 
     return cmd(**kwargs)
 
@@ -49,7 +51,7 @@ def admin_policy_list(**kwargs):
       {'status': 'success', 'policy': 'writeonly', 'isGroup': False},
       {'status': 'success', 'policy': 'admins', 'isGroup': False}]
     '''
-    cmd = Command('mc {flags} admin policy list {target}')
+    cmd = Command(POLICY_COMMAND + 'list {target}')
 
     return cmd(**kwargs)
 
@@ -69,7 +71,7 @@ def admin_policy_info(**kwargs):
           'Resource': ['arn:aws:s3:::*']}]},
       'isGroup': False}
     '''
-    cmd = Command('mc {flags} admin policy info {target} {name}')
+    cmd = Command(POLICY_COMMAND + 'info {target} {name}')
 
     return cmd(**kwargs)
 
@@ -91,10 +93,8 @@ def admin_policy_set(**kwargs):
         raise KeyError('Only one of user or group arguments can be set.')
 
     if 'group' in kwargs:
-        cmd = Command(
-            'mc {flags} admin policy set {target} {name} group={group}')
+        cmd = Command(POLICY_COMMAND + 'set {target} {name} group={group}')
     else:
-        cmd = Command(
-            'mc {flags} admin policy set {target} {name} user={user}')
+        cmd = Command(POLICY_COMMAND + 'set {target} {name} user={user}')
 
     return cmd(**kwargs)

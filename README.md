@@ -3,7 +3,8 @@
 # bmc
 
 
-bmc is a Python wrapper for the Minio _mc_ command line interface.
+bmc is a Python wrapper for MinIO's command line interface mc and minio. MinIO has a useful client library which unfortunately lacks administrative capabilities, such as adding users and hosts, which we need to do for the [iko](https://iko.ai) machine learning platform.
+
 
 ## Installation
 

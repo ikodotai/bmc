@@ -33,6 +33,26 @@ mc cp
 .. autofunction:: cp
 
 
+mc group
+--------
+
+.. autofunction:: admin_group_add
+.. autofunction:: admin_group_remove
+.. autofunction:: admin_group_info
+.. autofunction:: admin_group_list
+.. autofunction:: admin_group_enable
+.. autofunction:: admin_group_disable
+
+
+mc policy
+---------
+
+.. autofunction:: admin_policy_add
+.. autofunction:: admin_policy_remove
+.. autofunction:: admin_policy_list
+.. autofunction:: admin_policy_info
+.. autofunction:: admin_policy_set
+
 
 mc admin
 --------

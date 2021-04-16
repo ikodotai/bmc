@@ -1,6 +1,6 @@
 '''BIGmama Python wrapper for the MinIO command line interface.'''
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 __title__ = 'bmc'
 
 

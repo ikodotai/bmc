@@ -37,8 +37,8 @@ setup(
     url='http://gitlab.com/big-mama-tech/bmc',
     classifiers=[
         "Programming Language :: Python",
-        "Development Status :: 1 - Alpha",
-        "License :: OSI Approved",
+        "Development Status :: 3 - Alpha",
+        "License :: Other/Proprietary License",
         "Natural Language :: English",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3.7",

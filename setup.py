@@ -31,6 +31,7 @@ setup(
     author_email="contact@big-mama.io",
     description="Python wrapper for Minio Admin",
     long_description=get_long_description(),
+    long_description_content_type="text/markdown",
     install_requires=get_requirements(),
     include_package_data=True,
     url='http://gitlab.com/big-mama-tech/bmc',

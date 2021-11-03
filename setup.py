@@ -34,7 +34,7 @@ setup(
     long_description_content_type="text/markdown",
     install_requires=get_requirements(),
     include_package_data=True,
-    url='http://gitlab.com/big-mama-tech/bmc',
+    url='https://big-mama-tech.gitlab.io/bmc/',
     classifiers=[
         "Programming Language :: Python",
         "Development Status :: 3 - Alpha",

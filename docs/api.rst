@@ -64,6 +64,12 @@ mc admin
 .. autofunction:: admin_user_disable
 .. autofunction:: admin_user_info
 
+mc bucket quota
+--------
+.. autofunction:: admin_bucket_quota_get
+.. autofunction:: admin_bucket_quota_set
+
+
 mc config
 ---------
 

@@ -57,6 +57,11 @@ from ._group import (
     admin_group_disable,
 )
 
+from ._quota import (
+    admin_bucket_quota_get,
+    admin_bucket_quota_set,
+)
+
 from ._utils import (
     BMCError,
     check_error,
